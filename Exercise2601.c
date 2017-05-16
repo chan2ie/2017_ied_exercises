@@ -31,7 +31,7 @@ int main(void) {
 
 int palindrome (int num, int digit){
 	
-	int frontnum;
+	int frontnum,s;
 
 	for (frontnum = num; frontnum >= digit * 10;){
 		frontnum = frontnum / 10;
@@ -48,7 +48,8 @@ int palindrome (int num, int digit){
 	}
 	else{
 		if ((num / digit) % 10 == frontnum % 10){
-			palindrome(num, digit*10);
+			s=palindrome(num, digit*10);
+			return s;
 		}
 		else return 0;
 	}
